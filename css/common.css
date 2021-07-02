@@ -1,0 +1,232 @@
+ /*
+	font-family: 'Nanum Gothic', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
+   */
+
+
+
+
+
+/********************************************** 공통 **********/  
+
+ .inner{
+	 max-width:1180px; /*이보다 작아지면 width 100%*/
+	 width:calc(100% - 18px);
+	 border:0px solid green; /**나중에 지울 것**/
+	 margin:0 auto;
+ }
+ /*overflow:hidden 대체 -->after에 content를 줌으로서 자리를 갖게되어 a tag의 높이를 갖게 됨*/
+ .clearfix:after{
+	 content:"";
+	 display:block;
+	 clear:both;
+ }
+	 
+/********************************************** 헤더 **********/    
+  header{
+   
+   border:0px solid red; /**나중에 지울 것**/
+   
+   position:absolute;
+   width:100%;
+    /*페이스북 끝부분에 약간의 여백을 주기 위해서 1180보다 1200px을 쓴다*/
+   }
+   
+   header .top_menu { /* 헤더의 직속 자식만을 선택하는 선택자*/
+   border: 0px solid blue;
+   overflow:hiden;
+   float:right;
+   margin:5px 0 7px 0;
+      }
+	  
+	header .top_menu li{
+   border: 0px solid green;
+   float:left;
+   padding:0 29px;
+   position:relative;
+     }
+	 header .top_menu li:last-child{
+	 padding-right:0;
+	 }
+    header ul li:after{
+	content:"";
+	width:2px;
+	height:13px;
+	display:inline-block; /*content의 높이와 너비를 갖게하기 위함*/
+	background:#fff;
+	position:absolute;
+	right: 0;
+    top: 4px;
+    }
+		  header .top_menu li:last-child:after{
+		  display:none;
+		  }
+		header .top_menu li a{
+		border: 0px solid cyan;
+		color: #fff;
+		font-family: 'Nanum Gothic', sans-serif;
+		font-weight:400;
+		font-size:14px;
+		      }
+			  
+	  header nav{
+	  /*width:1180px;*/
+	  height:91px;
+	  background:#fff;
+	  clear:both;
+	  }
+	  
+	   header nav h1 {
+		  border: 0px solid green;
+		  float:left;
+		  margin: 20px 0 0 17px;
+	  }
+	   header nav h1 a {
+		  border: 0px solid blue;
+		  display:block; /******************************************  **/
+	  }
+	  
+	  header nav h1 a img{
+		  border: 0px solid orange;
+	  }
+	   header nav ul{
+		   border: 0px solid green;
+		   float:right;
+		   margin-top:38px;
+		   
+	   }
+		 header nav ul li{
+		   border :0px solid blue;
+		   overflow: hiden;
+		   float:left;
+		   padding-right:74px;
+		   
+	   }  
+	   header nav ul li:last-child{
+		   padding-right:65px;
+	   }
+	   
+	   header nav ul li a{
+		   border :0px solid orange;
+		   font-family: 'Nanum Gothic', sans-serif;
+		   font-weight: 800;
+		   font-size:17px;
+		   text-transform:uppercase; /**capitalize, lowercase **/
+	   }
+	   header nav ul li a:hover{
+		   color:#f26572;
+	   }
+		
+		header nav .mobile_btn{
+			 display:block;
+			 width:25px;
+			 /*마크업에 있는 글자를 보이지 않게하는 방법*/
+			 font-size:0;
+			 overflow:hidden;
+			 float:right;
+			 margin:19px 0 0 14px;
+		 }
+	  
+	   header nav .mobile_btn span{
+		   display:block;
+		   height:4px;
+		   background:var(--point-color);
+	   }
+	  
+		header nav .mobile_btn span:nth-child(2){
+			margin:5px 0;
+		}	  
+	  
+	  /********************************************************** 푸터 **********/
+	  
+	  footer{
+		  background:var(--point-color);
+		  color:#fff;
+		  font-family: 'Nanum Gothic', sans-serif;
+		  font-weight:nomal;
+		  font-size:15px;
+		  text-align:center;
+		  padding:45px 0 54px;
+		  margin-top:101px;
+		  
+	  }
+	  footer .ft_info li{
+		  display:inline-block;
+		  position:relative;
+		  padding:0 14px 0 6px;
+		  font-weight:700;
+	  }
+	  footer .ft_info li a{
+		  color:#fff;/*a 태그는 별도로 지정하지 않으면 안됨 a 안의 h3태그에 넣어도 됨*/
+		  
+	  }
+	  
+	    footer .ft_info li:first-child{
+			padding-left:0;
+		}
+		footer .ft_info li:last-child{
+			padding-right:0;
+		}
+	footer .ft_info li:after{
+	content:"";
+	width:2px;
+	height:13px;
+	display:inline-block; /*content의 높이와 너비를 갖게하기 위함*/
+	background:#fff;
+	position:absolute;
+	right: 0;
+    top: 2px;
+    }
+	  
+	  
+	   footer .ft_info li:last-child:after{
+		display:none;
+		   
+	   }
+	   footer address{
+		   margin:25px 0 25px 0;
+	   }
+	     footer address span{
+			 margin-right:16px;
+		 }
+		  footer address span:last-child{
+			  margin-right:0px;
+		  }
+		  
+/************************작은PC(노트북)또는 큰 테블릿형 1180px************************/  
+		  
+	@media screen and (max-width:1180px){ 
+		  header nav ul li{
+			  padding-right:45px;
+		  }
+	}
+		  
+ /************************테블릿형 960px************************/
+	@media screen and (max-width:960px){
+		header nav{
+			height:59px;
+		}
+		 
+		 header nav h1 {
+		    margin: 16px 0 0 14px;
+		}	
+		
+		header nav ul{
+			display:none;
+			
+		}
+		
+		header {background:#fff}/* 헤더의 색깔을 바꿔서 inner안에 18px때문에 발생하는 여백을 맞춰준다 또는 header inner {width:100%}로 바꾼다*/
+		
+		/*header .inner {width:100%;} 를 쓸 경우 사진이 약간 왼쪽으로 이동*/
+		header .top_menu{
+			display:none;
+		}
+		/*header{display:none;*/
+		
+		}
+		
+		header nav h1 a img{width:74px;
+		}
+		
+	}

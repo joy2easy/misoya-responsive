@@ -1,0 +1,42 @@
+<!doctype html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- 반응형 코딩에서 필수인 메타태그 뷰포트-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes,minimum-scale=1, maximum-scale=1.5">
+		<title>반응형 기초</title>
+		<style>
+		*{margin:0;padding:0;box-sizing:border-box;}
+		
+		
+		div {overflow:hidden; max-width:1440px;width:90%;margin:0 auto;}
+		
+		
+		div p{float:left;width:33.3333%;border:1px solid red;height:200px;font-size:100px;}
+		div p:nth-child(1){background:yellow;}
+		div p:nth-child(2){background:orange;}
+		div p:nth-child(3){background:pink;}
+		   
+		   /*미디어쿼리*/
+		    /* 모든 스크린 기기에서 그리고 최대너비가 1200px이하인 브라우저에서:1200px이하에서 작동*/
+		   @media screen and (max-width:1200px){
+		   div p{width:50%}
+		   div p:nth-child(3){width:100%; float:none;clear:both;}
+		   }
+		   /*800px이하에서 작동*/
+		    @media screen and (max-width:800px){
+			div p{width:100%;float:none;}
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+	<div>
+		<p>1</p>
+		<p>2</p>
+		<p>3</p>
+	</div>
+	
+	</body>
+	</html>

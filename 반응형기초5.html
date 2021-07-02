@@ -1,0 +1,52 @@
+<!doctype html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- 반응형 코딩에서 필수인 메타태그 뷰포트-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes,minimum-scale=1, maximum-scale=1.5">
+		<title>반응형 기초5</title>
+		<style>
+		*{margin:0;padding:0;box-sizing:border-box;}
+		:root{font-size:10px;}
+		div {overflow:hidden;font-size:2em;}
+		div p{border:1px solid red;height:700px;}
+		
+		
+		/*
+		em은 직속부모요소의 영향을 받아서 계속해서 배율이 증가 감소할 수 있음
+		rem은 root의 영향만을 받음
+		*/
+		div p:nth-child(1){background:yellow;font-size:1em;}
+		div p:nth-child(2){background:orange;font-size:3rem;} /*root em을 말한다*/
+		
+		
+		div p:nth-child(3){background:pink;font-size:2vw; width:50vw;}
+		/*
+		vw는 viewport의 width의 약자
+		1vw는 만약 현재 브라우저가 1920px인 경우, 1/100=1vw임 19.2px
+		브라우저창이 1000px로 축소되면 1vw는 10px로 바뀜
+		*/   
+		div p:nth-child(4){background:skyblue;font-size:10vh; height: 50vh;}
+		
+		/*
+		vh는 viewport height의 약자
+		*/
+			
+		@media screen and (max-width:800px){
+		div p:nth-child(3){font-size:4vw;}
+		
+		}	
+			
+			
+		</style>
+	</head>
+	<body>
+	<div>
+		<p>1그들의 그것을 듣기만 웅대한 튼튼하며, 풀밭에 그리하였는가? 행복스럽고 생생하며, 반짝이는 고동을 봄바람이다. 싸인 앞 품으며, 황금시대의 얼음이 얼마나 그와 구하지 칼이다. 그들의 사랑의 살았으며, 피가 충분히 쓸쓸하랴?</p>
+		<p>2그들의 그것을 듣기만 웅대한 튼튼하며, 풀밭에 그리하였는가? 행복스럽고 생생하며, 반짝이는 고동을 봄바람이다. 싸인 앞 품으며, 황금시대의 얼음이 얼마나 그와 구하지 칼이다. 그들의 사랑의 살았으며, 피가 충분히 쓸쓸하랴?</p>
+		<p>3그들의 그것을 듣기만 웅대한 튼튼하며, 풀밭에 그리하였는가? 행복스럽고 생생하며, 반짝이는 고동을 봄바람이다. 싸인 앞 품으며, 황금시대의 얼음이 얼마나 그와 구하지 칼이다. 그들의 사랑의 살았으며, 피가 충분히 쓸쓸하랴?</p>
+		<p>4그들의 그것을 듣기만 웅대한 튼튼하며, 풀밭에 그리하였는가? 행복스럽고 생생하며, 반짝이는 고동을 봄바람이다. 싸인 앞 품으며, 황금시대의 얼음이 얼마나 그와 구하지 칼이다. 그들의 사랑의 살았으며, 피가 충분히 쓸쓸하랴?</p>
+	</div>
+	
+	</body>
+	</html>
